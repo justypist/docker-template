@@ -12,6 +12,16 @@
       "label": "build",
       "type": "shell",
       "command": "docker build -t docker-template:latest ."
+    },
+    {
+      "label": "start",
+      "type": "shell",
+      "command": "docker run -itd -p 10022:22 --hostname dev --name dev docker-template:latest"
+    },
+    {
+      "label": "exec",
+      "type": "shell",
+      "command": "docker exec -it -u user -w ~ dev bash"
     }
   ]
 }
