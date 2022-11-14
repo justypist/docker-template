@@ -11,7 +11,7 @@ RUN echo build started. \
     && sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list \
     && apt-get update \
     # basic tools
-    && apt-get install -y curl openssh-server vim sudo \
+    && apt-get install -y curl wget openssh-server vim sudo \
     # add a default user
     && useradd -m -d /home/user -G sudo -p Qwe12300 -s /bin/bash user \
     && echo "user:user" | chpasswd \
